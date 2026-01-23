@@ -2,6 +2,10 @@ import type { CollectionConfig } from 'payload'
 
 export const Cars: CollectionConfig = {
   slug: 'cars',
+  labels: {
+    singular: 'Car',
+    plural: 'Cars',
+  },
   admin: { useAsTitle: 'title' },
   hooks: {
     afterRead: [

@@ -1,5 +1,6 @@
 # Payload Blank Template
 
+git push -u origin main  
 This template comes configured with the bare minimum to get started on anything you need.
 
 ## Quick start

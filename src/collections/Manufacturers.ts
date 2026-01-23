@@ -9,3 +9,4 @@ export const Manufacturers: CollectionConfig = {
     { name: 'cars', type: 'join', on: 'manufacturer', collection: 'cars' },
   ],
 }
+ 

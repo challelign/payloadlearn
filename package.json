@@ -21,6 +21,7 @@
     "@payloadcms/db-mongodb": "3.64.0",
     "@payloadcms/next": "3.64.0",
     "@payloadcms/richtext-lexical": "3.64.0",
+    "@payloadcms/richtext-slate": "3.64.0",
     "@payloadcms/ui": "3.64.0",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
