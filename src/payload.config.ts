@@ -11,6 +11,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Cars } from './collections/Cars'
 import { Manufacturers } from './collections/Manufacturers'
+import { number, select } from 'payload/shared'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -54,6 +55,61 @@ export default buildConfig({
           unique: true,
           admin: {
             placeholder: 'Enter an email address',
+          },
+        },
+        {
+          name: 'number',
+          type: 'number',
+          admin: {
+            placeholder: 'Enter a number',
+          },
+        },
+        {
+          name: 'select',
+          type: 'select',
+          options: [
+            {
+              label: 'Select 1',
+              value: 'select1',
+            },
+            {
+              label: 'Select 2',
+              value: 'select2',
+            },
+            {
+              label: 'Select 3',
+              value: 'select3',
+            },
+          ],
+          hasMany: true, // to select multiple options
+          admin: {
+            isClearable: false,
+            // isClearable: true,
+            isSortable: false,
+          },
+        },
+        {
+          name: 'checkbox',
+          type: 'checkbox',
+          admin: {
+            description: 'Check this box',
+          },
+        },
+        {
+          name: 'date',
+          type: 'date',
+          admin: {
+            description: 'Select a date',
+          },
+        },
+        {
+          name: 'time',
+          type: 'date',
+          admin: {
+            date: {
+              pickerAppearance: 'dayAndTime',
+              timeIntervals: 15,
+            },
           },
         },
       ],

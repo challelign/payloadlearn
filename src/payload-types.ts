@@ -222,6 +222,17 @@ export interface Post {
   id: string;
   title?: string | null;
   email?: string | null;
+  number?: number | null;
+  select?: ('select1' | 'select2' | 'select3')[] | null;
+  /**
+   * Check this box
+   */
+  checkbox?: boolean | null;
+  /**
+   * Select a date
+   */
+  date?: string | null;
+  time?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -404,6 +415,11 @@ export interface ManufacturersSelect<T extends boolean = true> {
 export interface PostsSelect<T extends boolean = true> {
   title?: T;
   email?: T;
+  number?: T;
+  select?: T;
+  checkbox?: T;
+  date?: T;
+  time?: T;
   updatedAt?: T;
   createdAt?: T;
 }
